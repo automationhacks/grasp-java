@@ -1,4 +1,4 @@
-// As part of Notes/languages/java/2_data_types.md
+package basics;// As part of Notes/languages/java/2_data_types.md
 // write java program to convert fahrenheit to celsius
 
 import java.util.Scanner;

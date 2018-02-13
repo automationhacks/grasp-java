@@ -1,3 +1,5 @@
+package basics;
+
 /**
  * Write a class Student which keeps track of how many students it created.
  */

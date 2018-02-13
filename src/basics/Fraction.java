@@ -1,3 +1,5 @@
+package basics;
+
 public class Fraction extends Number implements Comparable<Fraction> {
     private Integer numerator;
     private Integer denominator;
@@ -87,13 +89,14 @@ public class Fraction extends Number implements Comparable<Fraction> {
     }
 
     public int compareTo(Fraction other) {
-        /**
-         * Impl for Comparable interface's method.
-         * This is pre-requisite to implement sorting of fractions.
-         */
-        num1 = numerator * other.denominator;
-        num2 = denominator * other.denominator;
-        return num1 - num2;
+//        /**
+//         * Impl for Comparable interface's method.
+//         * This is pre-requisite to implement sorting of fractions.
+//         */
+//        this.num1 = numerator * other.denominator;
+//        this.num2 = denominator * other.denominator;
+//        return num1 - num2;
+        return 1;
     }
 
     public static void main(String[] args) {

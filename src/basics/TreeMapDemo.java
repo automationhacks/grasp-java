@@ -1,4 +1,4 @@
-// As part of Notes/languages/java/2_data_types.md
+package basics;// As part of Notes/languages/java/2_data_types.md
 // Implement program to find frequency of each word in a file.
 
 import java.util.Scanner;

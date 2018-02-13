@@ -1,4 +1,4 @@
-// As part of Notes/languages/java/2_data_types.md
+package basics;// As part of Notes/languages/java/2_data_types.md
 // Write a program that reads from a file which has integer (0-9) on each line and 
 // then prints a histogram, stating how many occurence of a no is present
 

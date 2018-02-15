@@ -1,6 +1,6 @@
 package cave_of_programming;
 
-public class Variables1 {
+public class Variables_1 {
 
     public static void main(String[] args) {
         // primitive data types in java

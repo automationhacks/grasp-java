@@ -2,7 +2,7 @@ package cave_of_programming;
 
 import java.util.Scanner;
 
-public class UserInput7 {
+public class UserInput_7 {
     public static void main(String[] args) {
         // Scanner object to read file stream
         Scanner input = new Scanner(System.in);

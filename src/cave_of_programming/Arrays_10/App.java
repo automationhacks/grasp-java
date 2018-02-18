@@ -1,6 +1,6 @@
-package cave_of_programming;
+package cave_of_programming.Arrays_10;
 
-public class Arrays_10 {
+public class App {
 
     public static void main(String[] args) {
 

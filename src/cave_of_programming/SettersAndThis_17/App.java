@@ -31,7 +31,7 @@ class Frog {
 }
 
 
-public class SettersAndThis {
+public class App {
 
     public static void main(String[] args) {
         Frog frog1 = new Frog();

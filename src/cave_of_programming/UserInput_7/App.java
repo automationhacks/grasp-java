@@ -1,8 +1,8 @@
-package cave_of_programming;
+package cave_of_programming.UserInput_7;
 
 import java.util.Scanner;
 
-public class UserInput_7 {
+public class App {
     public static void main(String[] args) {
         // Scanner object to read file stream
         Scanner input = new Scanner(System.in);

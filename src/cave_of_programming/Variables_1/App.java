@@ -1,6 +1,6 @@
-package cave_of_programming;
+package cave_of_programming.Variables_1;
 
-public class Variables_1 {
+public class App {
 
     public static void main(String[] args) {
         // primitive data types in java

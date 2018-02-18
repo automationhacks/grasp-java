@@ -1,4 +1,4 @@
-package cave_of_programming;
+package cave_of_programming.ClassesObjects_13;
 
 /*
 1. There should be only one public class and file should be named with <same_name>.java
@@ -12,7 +12,7 @@ class Person {
     int age;
 }
 
-public class ClassesObjects_13 {
+public class App {
 
     public static void main(String[] args) {
         Person person1 = new Person();

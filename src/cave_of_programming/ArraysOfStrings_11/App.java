@@ -1,6 +1,6 @@
-package cave_of_programming;
+package cave_of_programming.ArraysOfStrings_11;
 
-public class ArraysOfStrings_11 {
+public class App {
 
     public static void main(String[] args) {
         // Declaration and assignment of String array is similar to integer

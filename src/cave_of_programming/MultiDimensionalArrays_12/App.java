@@ -1,6 +1,6 @@
-package cave_of_programming;
+package cave_of_programming.MultiDimensionalArrays_12;
 
-public class MultiDimensionalArrays_12 {
+public class App {
 
     public static void main(String[] args) {
 

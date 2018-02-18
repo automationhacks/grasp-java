@@ -37,7 +37,7 @@ class Machine {
 
 }
 
-public class Constructors {
+public class App {
 
     public static void main(String[] args) {
         // new Machine(); code actually invokes the constructor

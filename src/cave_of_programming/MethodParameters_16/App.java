@@ -15,7 +15,7 @@ class Robot {
 }
 
 
-public class MethodParameters {
+public class App {
     public static void main(String[] args) {
         Robot jarvis = new Robot();
 

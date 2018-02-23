@@ -23,4 +23,9 @@ public class SimpleTest {
     public void aSlowTest() {
         System.out.println("Slow test");
     }
+
+    @Test
+    public void aMediumTest() {
+        System.out.println("Medium Test");
+    }
 }

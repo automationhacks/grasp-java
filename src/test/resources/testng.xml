@@ -1,0 +1,59 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<!-- Pick a test class
+<suite name="Basic Suite" verbose="1">
+    <test name="Nopackage">
+        <classes>
+            <class name="basics1.SimpleTest"/>
+        </classes>
+    </test>
+</suite>
+-->
+
+
+<!-- Pick all classes in a package
+<suite name="Pick packages">
+    <test name="Just packages">
+        <packages>
+            <package name="basics1"/>
+        </packages>
+    </test>
+</suite>
+-->
+
+ <!--&lt;!&ndash;Use of groups to include or exclude tests&ndash;&gt;-->
+<!--<suite name="Power of Groups">-->
+    <!--<test name="Include groups test">-->
+        <!--<groups>-->
+            <!--<run>-->
+                <!--&lt;!&ndash; You can multiple groups like this &ndash;&gt;-->
+                <!--<include name="fast"/>-->
+                <!--<include name="slow"/>-->
+                <!--<exclude name="medium"/>-->
+            <!--</run>-->
+        <!--</groups>-->
+
+        <!--<classes>-->
+            <!--<class name="basics1.SimpleTest"/>-->
+
+            <!--&lt;!&ndash; Below construct is to include methods in a class &ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="basics1.SimpleTest">&ndash;&gt;-->
+                <!--&lt;!&ndash;<methods>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include name="aMediumTest"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</methods>&ndash;&gt;-->
+            <!--&lt;!&ndash;</class>&ndash;&gt;-->
+
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!--By default methods are run in the order they are found in xml, if no order specified just give
+preserve-order="false" at suite level
+-->
+<suite name="Preserve order" preserve-order="false">
+    <test name="Dont preserve order">
+        <packages>
+            <package name="basics1"/>
+        </packages>
+    </test>
+</suite>

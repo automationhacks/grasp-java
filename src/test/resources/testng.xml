@@ -4,7 +4,7 @@
 <suite name="Basic Suite" verbose="1">
     <test name="Nopackage">
         <classes>
-            <class name="basics1.SimpleTest"/>
+            <class name="examples.SimpleTest"/>
         </classes>
     </test>
 </suite>
@@ -34,10 +34,10 @@
         <!--</groups>-->
 
         <!--<classes>-->
-            <!--<class name="basics1.SimpleTest"/>-->
+            <!--<class name="examples.SimpleTest"/>-->
 
             <!--&lt;!&ndash; Below construct is to include methods in a class &ndash;&gt;-->
-            <!--&lt;!&ndash;<class name="basics1.SimpleTest">&ndash;&gt;-->
+            <!--&lt;!&ndash;<class name="examples.SimpleTest">&ndash;&gt;-->
                 <!--&lt;!&ndash;<methods>&ndash;&gt;-->
                     <!--&lt;!&ndash;<include name="aMediumTest"/>&ndash;&gt;-->
                 <!--&lt;!&ndash;</methods>&ndash;&gt;-->
@@ -50,10 +50,73 @@
 <!--By default methods are run in the order they are found in xml, if no order specified just give
 preserve-order="false" at suite level
 -->
-<suite name="Preserve order" preserve-order="false">
-    <test name="Dont preserve order">
-        <packages>
-            <package name="basics1"/>
-        </packages>
+<!--<suite name="Preserve order" preserve-order="false">-->
+    <!--<test name="Dont preserve order">-->
+        <!--<packages>-->
+            <!--<package name="basics1"/>-->
+        <!--</packages>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!-- Allows methods with return values to also be picked -->
+<!--<suite name="MethodsWithReturn" allow-return-values="true">-->
+    <!--<test name="MethodsWithReturn">-->
+        <!--<classes>-->
+            <!--<class name="examples.ReturnValueTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!--<suite name="GroupingTest">-->
+    <!--<groups>-->
+        <!--<run>-->
+            <!--<include name="checkintest"/>-->
+        <!--</run>-->
+    <!--</groups>-->
+    <!--<test name="Grouping Test">-->
+        <!--<classes>-->
+            <!--<class name="examples.MultipleGroupsTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!-- You can choose to include or exclude specific method, useful for broken methods -->
+<!--<suite name="Include exclude specific methods">-->
+    <!--<test name="Pick and choose which to run">-->
+        <!--<classes>-->
+            <!--<class name="examples.MultipleGroupsTest">-->
+                <!--<methods>-->
+                    <!--<include name="foo"/>-->
+                    <!--<exclude name="bar"/>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<suite name="MetaGroups Example">
+
+    <test name="Regression">
+        <!-- Define groups of groups called as Metagroups -->
+        <groups>
+            <define name="functest">
+                <include name="slave"/>
+            </define>
+
+            <define name="all">
+                <include name="functest"/>
+                <include name="checkintest"/>
+            </define>
+
+            <!-- Specify to run all.-->
+            <run>
+                <include name="all"/>
+                <exclude name="broken"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="examples.MultipleGroupsTest"/>
+        </classes>
     </test>
 </suite>

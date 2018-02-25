@@ -94,29 +94,63 @@ preserve-order="false" at suite level
     <!--</test>-->
 <!--</suite>-->
 
-<suite name="MetaGroups Example">
+<!-- Create groups of groups and include or exclude them as required.-->
+<!--<suite name="MetaGroups Example">-->
 
-    <test name="Regression">
-        <!-- Define groups of groups called as Metagroups -->
-        <groups>
-            <define name="functest">
-                <include name="slave"/>
-            </define>
+    <!--<test name="Regression">-->
+        <!--&lt;!&ndash; Define groups of groups called as Metagroups &ndash;&gt;-->
+        <!--<groups>-->
+            <!--<define name="functest">-->
+                <!--<include name="slave"/>-->
+            <!--</define>-->
 
-            <define name="all">
-                <include name="functest"/>
-                <include name="checkintest"/>
-            </define>
+            <!--<define name="all">-->
+                <!--<include name="functest"/>-->
+                <!--<include name="checkintest"/>-->
+            <!--</define>-->
 
-            <!-- Specify to run all.-->
-            <run>
-                <include name="all"/>
-                <exclude name="broken"/>
-            </run>
-        </groups>
+            <!--&lt;!&ndash; Specify to run all.&ndash;&gt;-->
+            <!--<run>-->
+                <!--<include name="all"/>-->
+                <!--<exclude name="broken"/>-->
+            <!--</run>-->
+        <!--</groups>-->
 
+        <!--<classes>-->
+            <!--<class name="examples.MultipleGroupsTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!--<suite name="Partial Groups">-->
+    <!--<test name="Partial Groups">-->
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="checkintest"/>-->
+            <!--</run>-->
+        <!--</groups>-->
+        <!--<classes>-->
+            <!--<class name="examples.PartialGroupsTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!-- Create parameters and use in tests -->
+<!--<suite name="Parameters Examples">-->
+    <!--<parameter name="serverName" value="TestServer"/>-->
+    <!--<parameter name="dbName" value="TestDB"/>-->
+    <!--<parameter name="userName" value="admin"/>-->
+    <!--<test name="Simple Parameters test">-->
+        <!--<classes>-->
+            <!--<class name="examples.ParametersTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<suite name="Data Provider example">
+    <test name="Data provider">
         <classes>
-            <class name="examples.MultipleGroupsTest"/>
+            <class name="examples.DataProviderInjection"/>
         </classes>
     </test>
 </suite>

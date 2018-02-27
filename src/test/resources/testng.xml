@@ -147,10 +147,38 @@ preserve-order="false" at suite level
     <!--</test>-->
 <!--</suite>-->
 
-<suite name="Data Provider example">
-    <test name="Data provider">
+<!-- xml config for Data provider related features-->
+<!--<suite name="Data Provider example">-->
+    <!--<test name="Data provider">-->
+        <!--<classes>-->
+            <!--<class name="examples.DataProviderInjection"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<!-- Illustrates dependencies in testNG-->
+<!--<suite name="Dependencies">-->
+    <!--<test name="Dependencies Test">-->
+        <!--<groups>-->
+            <!--<dependencies>-->
+                <!--<group name="Modern" depends-on="Classic"/>-->
+            <!--</dependencies>-->
+        <!--</groups>-->
+        <!--<classes>-->
+            <!--<class name="examples.DependenciesTest">-->
+                <!--<methods>-->
+                    <!--<exclude name="makeHTTPRequest"/>-->
+                    <!--<exclude name="serverStarted"/>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<suite name="Factories">
+    <test name="Factories test">
         <classes>
-            <class name="examples.DataProviderInjection"/>
+            <class name="examples.WebTestFactory"/>
         </classes>
     </test>
 </suite>

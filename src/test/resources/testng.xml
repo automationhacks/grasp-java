@@ -175,10 +175,19 @@ preserve-order="false" at suite level
     <!--</test>-->
 <!--</suite>-->
 
-<suite name="Factories">
-    <test name="Factories test">
+<!-- Factories example-->
+<!--<suite name="Factories">-->
+    <!--<test name="Factories test">-->
+        <!--<classes>-->
+            <!--<class name="examples.WebTestFactory"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<suite name="Class level annotation">
+    <test name="Class level annotation test">
         <classes>
-            <class name="examples.WebTestFactory"/>
+            <class name="examples.ClassLevelAnnotation"/>
         </classes>
     </test>
 </suite>

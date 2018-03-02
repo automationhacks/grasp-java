@@ -1,0 +1,8 @@
+Person: {
+  'name': 'Steve',
+  'age': 35,
+  'siblings': ["Rob", "Dylan"],
+  'predecessors': {
+    'grandpa': "Michael"
+  }
+}

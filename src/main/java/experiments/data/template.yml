@@ -1,0 +1,33 @@
+booking: {
+  makeBooking: '{
+                   "paymentType": 3,
+                   "deviceToken": "",
+                   "collection_location":"pickup",
+                   "shipment_method":"SameDay",
+                   "routes":
+                   [{
+                       "originName": "",
+                       "originNote": "",
+                       "originContactName": "{{originContact}}",
+                       "originContactPhone": "+917411586355",
+                       "originLatLong": "-6.170962,106.859825",
+                       "originAddress": "Central Jakarta City",
+                       "destinationName": "",
+                       "destinationNote": "",
+                       "destinationContactName": "{{destinationContact}}",
+                       "destinationContactPhone": "+917411586355",
+                       "destinationLatLong": "-6.221148,106.823604",
+                       "destinationAddress": "South Jakarta City",
+                       "item": "Special package",
+                       "storeOrderId":"",
+                       "insuranceDetails":
+                        {
+                          "applied": "true",
+                          "fee": "2500",
+                          "product_description": "PS4 latest",
+                          "product_price": "3500000"
+                        }
+
+                  }]
+                }'
+}

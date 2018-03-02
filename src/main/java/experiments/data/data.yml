@@ -1,0 +1,4 @@
+bookingData: {
+  originContact: 'Hello World',
+  destinationContact: 'To You!'
+}

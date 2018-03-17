@@ -19,7 +19,7 @@ class Person {
 
     // equals and hash code methods are required to be overridden
     // to give context on how two objects can be equal in a map or set.
-    // if overridden, would NOT allow to not insert non unique element in Map or Set
+    // if overridden, non unique elements would not be updated inside the map or set
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

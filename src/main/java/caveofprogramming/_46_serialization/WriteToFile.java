@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class WriteToFile {
@@ -20,6 +21,13 @@ public class WriteToFile {
                 os.writeObject(person);
             }
 
+            //  Writing again.
+//            os.writeInt(persons.size());
+//
+//            for (Person person : persons) {
+//                os.writeObject(person);
+//            }
+
             os.close();
 
         }
@@ -29,6 +37,18 @@ public class WriteToFile {
         }
         catch (IOException e) {
             System.out.println("Unable to write file to " + PATH);
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeMultiple(ArrayList<Person> persons) {
+        try(FileOutputStream fs = new FileOutputStream(PATH)) {
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(persons);
+            os.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

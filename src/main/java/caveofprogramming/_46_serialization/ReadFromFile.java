@@ -1,9 +1,7 @@
 package caveofprogramming._46_serialization;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
+import java.util.ArrayList;
 
 public class ReadFromFile {
 
@@ -31,5 +29,24 @@ public class ReadFromFile {
             System.out.println("Person class not found in program. Please fix access.");
             e.printStackTrace();
         }
+    }
+
+    public static void readMultiple() {
+        ObjectInputStream ois;
+        try (FileInputStream fs = new FileInputStream(PATH)) {
+            ois = new ObjectInputStream(fs);
+            ArrayList<Person> persons = (ArrayList<Person>) ois.readObject();
+
+            for (Person person : persons) {
+                System.out.println(person);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 }

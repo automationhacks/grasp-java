@@ -1,6 +1,7 @@
 package caveofprogramming._46_serialization;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -11,7 +12,18 @@ public class App {
         persons.add(person1);
         persons.add(person2);
 
-        WriteToFile.write(persons);
-        ReadFromFile.read();
+        Person[] personsArr = {new Person(3, "Gaurav"), new Person(4, "John")};
+        ArrayList<Person> peopleList = new ArrayList<>(Arrays.asList(personsArr));
+
+//        WriteToFile.write(persons);
+//        ReadFromFile.read();
+
+        WriteToFile.writeMultiple(persons);
+        ReadFromFile.readMultiple();
+
+        WriteToFile.writeMultiple(peopleList);
+        ReadFromFile.readMultiple();
+
+
     }
 }

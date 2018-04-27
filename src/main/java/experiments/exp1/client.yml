@@ -1,0 +1,20 @@
+consumer_instant: '{
+                       "payment_method": 4,
+                       "booking_type": "Instant",
+                       "device_id": "",
+                       "gcm_key": "dhbxNaJpc48:APA91bERLGw-KwFMzlwAFsaYId0XzO5PfgYwifiEZ1cazdM9Pk0D0cHyHjYqdACaBoKq0Gkoyamt_FB-_VE-EOPoaLdr3GNvRJ9MaSMLSkSdCI28FnRnh_fn5GJXw76bL2aT8s_kJCvz",
+                       "package_size": "",
+                       "package_description": "Automation Package 1",
+                       "destination_note": "",
+                       "destination_address": "East Jakarta, East Jakarta City, Jakarta, Indonesia",
+                       "destination_name": "Automation Destination",
+                       "destination_phone": "+917411586355",
+                       "destination_latitude": -6.228162,
+                       "destination_longitude": 106.912700,
+                       "origin_note": "",
+                       "origin_address": "East Jakarta, East Jakarta City, Jakarta, Indonesia",
+                       "origin_name": "Automation Origin",
+                       "origin_phone": "+917411586355",
+                       "origin_latitude": -6.228162,
+                       "origin_longitude": 106.912700
+                   }'

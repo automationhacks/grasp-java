@@ -18,8 +18,8 @@ public class SwitchExp {
 
     public static void main(String[] args) {
 
-        SwitchExp.switchWithFallThrough("foo");
         SwitchExp.switchWithFallThrough("bar");
+        SwitchExp.switchWithFallThrough("foo");
         SwitchExp.switchWithFallThrough("baz");
         SwitchExp.switchWithFallThrough("evil");
         

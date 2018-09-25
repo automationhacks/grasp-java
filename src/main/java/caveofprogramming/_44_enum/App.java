@@ -1,5 +1,8 @@
 package caveofprogramming._44_enum;
 
+import com.google.common.base.Enums;
+import com.google.common.base.Optional;
+
 public class App {
 
     private static String CONSUMER = "cons";
@@ -49,16 +52,39 @@ public class App {
 //        beforeEnum(CONSUMER);
 //        beforeEnum(ECOMMERCE);
 
-        afterEnum();
+//        afterEnum();
+//
+//        Animals animal = Animals.DOG;
+//
+//        System.out.println("Enum constant as string is " + animal.name());
+//        System.out.println("Name of animal is " + animal.getAnimalName());
+//
+//        // Another way of accessing enum constants value is:
+//        Animals animal2 = Animals.valueOf("CAT");
+//        System.out.println(animal2); // does NOT WORK in java8. Need to check why?
+//        System.out.println(animal2.getAnimalName());
 
-        Animals animal = Animals.DOG;
+//        Animals animal3 = Animals.valueOf("XYZ");
+//        System.out.println(animal3); // does NOT WORK in java8. Need to check why?
+//        System.out.println(animal3.getAnimalName());
 
-        System.out.println("Enum constant as string is " + animal.name());
-        System.out.println("Name of animal is " + animal.getAnimalName());
+//        System.out.println(Enums.getIfPresent(Animals.class, "DOG").orNull().getClass());
+//        System.out.println(Enums.getIfPresent(Animals.class, "xyz").orNull().getClass().getName());
 
-        // Another way of accessing enum constants value is:
+        Optional<Animals> animals = Enums.getIfPresent(Animals.class, "DOG");
+        if (animals.isPresent()) {
+            System.out.println(animals.get().getAnimalName());
+        }
+        else {
+            System.out.println("Failed");
+        }
 
-        Animals animal2 = Animals.valueOf("CAT");
-        System.out.println(animal2); // does NOT WORK in java8. Need to check why?
+//        try {
+//            System.out.println(animals.getAnimalName());
+//        }
+//        catch (NullPointerException e) {
+//            System.out.println("Boo yah!");
+//        }
+
     }
 }

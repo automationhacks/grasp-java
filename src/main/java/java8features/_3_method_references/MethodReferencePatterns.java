@@ -2,6 +2,8 @@ package java8features._3_method_references;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * The logic in the methods are dummy.
@@ -14,6 +16,14 @@ class Person {
 
     boolean isLegalName(String name) {
         return name.length() > 4;
+    }
+}
+
+class Animal {
+    private String type;
+
+    public Animal(String type) {
+        this.type = type;
     }
 }
 
@@ -56,6 +66,16 @@ public class MethodReferencePatterns {
         System.out.println(personNames);
     }
 
+    /**
+     * https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+     * Refer to above link to get a practical example for this.
+     */
+    private void referenceToConstructorOfAClass(List<Animal> animals) {
+        //TODO: Need to understand a practical use case for this.
+//        Stream<Animal> animalStream = animals.stream().map(Animal::new);
+//        System.out.println(animalStream.collect(Collectors.toList()));
+    }
+
 
     public static void main(String[] args) {
         List<String> people = new ArrayList<>();
@@ -72,5 +92,12 @@ public class MethodReferencePatterns {
 
         System.out.println(">>> referenceToInstanceMethodOfAType");
         patterns.referenceToInstanceMethodOfAType(people);
+
+        List<Animal> animals = new ArrayList<>();
+        animals.add(new Animal("Dog"));
+        animals.add(new Animal("Cat"));
+
+        patterns.referenceToConstructorOfAClass(animals);
+
     }
 }

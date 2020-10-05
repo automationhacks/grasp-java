@@ -1,4 +1,4 @@
-package googleTechDev;
+package google.techdev;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

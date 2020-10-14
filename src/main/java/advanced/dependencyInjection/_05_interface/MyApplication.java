@@ -4,14 +4,14 @@ import com.google.inject.*;
 
 public class MyApplication {
     public static void main(String[] args) {
-        // Register the Display module with the Guice.createInjector method
+        // 3. Register the Display module with the Guice.createInjector method
         Injector injector = Guice.createInjector(new DisplayModule());
         Greeter greeter = injector.getInstance(Greeter.class);
         greeter.sayHello();
     }
 }
 
-// This line would throw below error without being bound
+// 1. This line would throw below error without being bound
 // No implementation for advanced.dependencyInjection._05_interface.Displayer was bound.
 class Greeter {
 
@@ -33,6 +33,7 @@ class StdOutDisplayer implements Displayer {
     }
 }
 
+// 2. Add an implementation of Module interface and bind
 class DisplayModule implements Module {
     public void configure(Binder binder) {
         // Takes a java concrete type (class, enum, abstract type) and binds it to

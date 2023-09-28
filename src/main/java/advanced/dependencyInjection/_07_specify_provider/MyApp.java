@@ -1,6 +1,7 @@
 package advanced.dependencyInjection._07_specify_provider;
 
 import com.google.inject.*;
+import com.google.inject.Module;
 
 import java.util.Random;
 

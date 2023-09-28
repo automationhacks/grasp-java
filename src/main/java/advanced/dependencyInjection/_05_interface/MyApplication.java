@@ -1,6 +1,7 @@
 package advanced.dependencyInjection._05_interface;
 
 import com.google.inject.*;
+import com.google.inject.Module;
 
 public class MyApplication {
     public static void main(String[] args) {

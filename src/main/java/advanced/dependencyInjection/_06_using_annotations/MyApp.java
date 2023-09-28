@@ -1,6 +1,7 @@
 package advanced.dependencyInjection._06_using_annotations;
 
 import com.google.inject.*;
+import com.google.inject.Module;
 
 public class MyApp {
 

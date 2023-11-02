@@ -32,7 +32,7 @@ dependencies {
 group = 'groupId'
 version = '1.0-SNAPSHOT'
 description = 'grasp-java'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = '20.0'
 
 publishing {
     publications {
